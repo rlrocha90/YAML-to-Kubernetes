@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+data:
+  cache_host: memcached
+  cache_port: "80"
+  my.cnf: | 
+    [mysqld]
+    log-bin = mysql-bin
+    server-id = 1
