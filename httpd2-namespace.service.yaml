@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata: 
+   name: httpd2-service
+   namespace: kube-client
+spec:
+   selector:
+      app: httpd2
+   ports:
+   - protocol: TCP
+     port: 8098
+     targetPort: 80
