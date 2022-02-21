@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cm-pod
+spec:
+  containers:
+  - name: cm-pod
+    image: busybox
+    args:
+      - /bin/sh
+      - -c
+      - sleep 3000
+    volumeMounts:
+    - name: cmconfig
+      mountPath: "/etc/cmconfig"
+      readOnly: true
+  volumes:
+  - name: cmconfig
+    configMap:
+      name: http-www
