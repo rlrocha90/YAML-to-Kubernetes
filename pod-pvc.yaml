@@ -16,4 +16,4 @@ spec:
   volumes:
   - name: pvcdata
     persistentVolumeClaim:
-      claimname: k8s-pvc
+      claimName: k8s-pvc
