@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: httpd2
+   namespace: kube-client
+spec:
+   replicas: 3
+   selector:
+      matchLabels:
+         app: httpd2
+   template:
+      metadata:
+         labels: 
+            app: httpd2
+      spec:
+         containers:
+         - name: httpd2
+           image: httpd
+           ports:
+           - containerPort: 80 
