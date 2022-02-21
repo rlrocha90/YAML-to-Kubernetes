@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: web-nginx
-    iamge: nginx
+    image: nginx
     volumeMounts:
     - name: html
       mountPath: /usr/share/nginx/html
