@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-client
+spec:
+  containers:
+  - image: busybox
+    name: server
+    volumeMounts:
+    - mountPath: /server_dir
+      name: shared-volume
+    args:
+    - /bin/sh
+    - -c
+    - echo "hello-word" > /server_dir/hello; sleep 30000
+    
+  - image: busybox
+    name: client
+    volumeMounts:
+    - mountPath: /client_dir
+      name: shared-volume
+    args:
+    - /bin/sh
+    - -c
+    - cat /client_dir/hello ; sleep 30000
+    
+  volumes:
+  - name: shared-volume
+    emptyDir: {}
