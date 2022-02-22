@@ -13,11 +13,11 @@ spec:
       i=0;
       while true; 
         do
-          echo "$i: $(date)" >> /var/log/1.log;
-          echo "$(date) INFO $i" >> /var/log/2.log;
-          i=$((i+1));
-          sleep 1;
-        done;
+        echo "$i: $(date)" >> /var/log/1.log;
+        echo "$(date) INFO $i" >> /var/log/2.log;
+        i=$((i+1));
+        sleep 1;
+      done;
     volumeMounts:
     - name: varlog
       mountPath: /var/log
