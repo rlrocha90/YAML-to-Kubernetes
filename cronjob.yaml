@@ -8,8 +8,8 @@ spec:
       spec:
          template:
             spec:
-            containers:
-            -  name: hello-world
-               image: busybox
-               command: [“echo”, “hello kubernetes job”]
-            restartPolicy: OnFailure
+              containers:
+              -  name: hello-world
+                 image: busybox
+                 command: [“echo”, “hello kubernetes job”]
+              restartPolicy: OnFailure
