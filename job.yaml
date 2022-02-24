@@ -10,5 +10,5 @@ spec:
          containers:
          -  name: hello-world
             image: busybox
-            command: [“echo”, “hello kubernetes job”]
+            command: ["echo", "hello kubernetes job"]
          restartPolicy: Never
